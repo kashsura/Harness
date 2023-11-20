@@ -17,7 +17,7 @@ pipeline:
                   name: Build and push docker iamge
                   identifier: BuildAndPushDockerRegistry_1
                   spec:
-                    connectorRef: account.harnessImage
+                    connectorRef: pytconnectornew
                     repo: kashsura/pyt-flask
                     tags:
                       - latest
