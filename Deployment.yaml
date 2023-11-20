@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pyt-ui
+spec:
+  replicas: 2
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: pyt-ui
+  template:
+    metadata:
+      labels:
+        app: pyt-ui
+    spec:
+      containers:
+      - image: kashsura/pyt-flask:latest
+        name: pyt-ui
+        ports:
+        - containerPort: 3000
