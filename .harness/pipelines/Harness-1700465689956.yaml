@@ -14,7 +14,7 @@ pipeline:
             steps:
               - step:
                   type: BuildAndPushDockerRegistry
-                  name: BuildAndPushDockerRegistry_1
+                  name: Build and push docker iamge
                   identifier: BuildAndPushDockerRegistry_1
                   spec:
                     connectorRef: account.harnessImage
