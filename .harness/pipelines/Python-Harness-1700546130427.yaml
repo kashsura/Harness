@@ -1,0 +1,33 @@
+pipeline:
+  name: Build Python-Harness
+  identifier: Build_kashsura_Python_Harness_1700546167468
+  projectIdentifier: PythonHarnessProject
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: Build
+        identifier: Build
+        type: CI
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Echo Welcome Message
+                  identifier: Echo_Welcome_Message
+                  spec:
+                    shell: Sh
+                    command: echo "Welcome to Harness CI"
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: account.Github_OAuth_1700273705190
+        repoName: kashsura/Python-Harness
+        build: <+input>
