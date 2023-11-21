@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_kashsura_Python_Harness_1700546167468-push-trigger-input-set
+  identifier: Build_kashsura_Python_Harness_1700546167468pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: PythonHarnessProject
+  pipeline:
+    identifier: Build_kashsura_Python_Harness_1700546167468
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
