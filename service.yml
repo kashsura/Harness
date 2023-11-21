@@ -15,8 +15,8 @@ service:
                             connectorRef: harnessgitconnector
                             gitFetchType: Branch
                             paths:
-                                - Deployment.yaml
-                                - Service.yaml
+                                - python-deployment.yaml
+                                - python-Service.yaml
                             branch: main
                         skipResourceVersioning: false
                         enableDeclarativeRollback: false
