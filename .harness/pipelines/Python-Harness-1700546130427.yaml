@@ -13,12 +13,14 @@ pipeline:
           execution:
             steps:
               - step:
-                  type: Run
-                  name: Echo Welcome Message
-                  identifier: Echo_Welcome_Message
+                  type: BuildAndPushDockerRegistry
+                  name: BuildAndPushDockerImage
+                  identifier: BuildAndPushDockerImage
                   spec:
-                    shell: Sh
-                    command: echo "Welcome to Harness CI"
+                    connectorRef: dockerhub_connector
+                    repo: kashsura/pyt-flask
+                    tags:
+                      - latest
           platform:
             os: Linux
             arch: Amd64
