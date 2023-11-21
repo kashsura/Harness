@@ -16,7 +16,7 @@ service:
                             gitFetchType: Branch
                             paths:
                                 - python-deployment.yaml
-                                - python-Service.yaml
+                                - python-service.yaml
                             branch: main
                         skipResourceVersioning: false
                         enableDeclarativeRollback: false
